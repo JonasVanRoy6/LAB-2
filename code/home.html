@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>AutoMate</h2>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="active"><a href="home.html"><div id="icon"><i class="fas fa-solid fa-house-user"></div></i> Home</a></li>
+                <li ><a href="#"><div id="icon"><i class="fas fa-solid fa-inbox"></i></div></i> Inbox</a></li>
+                <li><a href="kalender.html"><div id="icon"><i class="fas fa-solid fa-car"></i></div></i> Voertuigen</a></li>
+                <li><a href="#"><div id="icon"><i class="fas fa-regular fa-calendar"></i></div></i> Kalender</a></li>
+                <hr>
+                <br>
+                <p>algemeen</p>
+                <li><a href="#"><div id="icon"><i class="fas fa-solid fa-bars"></i></div></i> Instellingen</a></li>
+                <li><a href="#"><div id="icon"><i class="fas fa-solid fa-question"></div></i> Help</a></li>
+            </ul>
+        </nav>
+        <button class="logout"><i class="icon logout"></i> Logout</button>
+    </aside>
+    <div class="main-content">
+        <header>
+            <h1>Welkom Terug, User</h1>
+           <div class="user-info">
+                        
+                        <span class="notification-icon"></span>
+                        <img src="images/jef.jpg" alt="">
+                        <div id="user">
+                            <span class="user-name">Naam User</span>
+                        <span class="user-email">naamuser@gmail.com</span>
+                    </div></div>
+        </header>
+        <section class="add-vehicle">
+            <div class="scroll-container">
+                <div class="card">
+                    <div class="left-card">
+                        <h2>EEN NIEUW VOERTUIG TOEVOEGEN</h2>
+                        <p>Voeg in enkele eenvoudige stappen een voertuig toe.</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                </div>
+                <div class="card">
+                    <div class="left-card">
+                        <h2>ANDER VOERTUIG</h2>
+                        <p>Voeg in enkele eenvoudige stappen een ander voertuig toe.</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                </div>
+                <!-- Voeg meer cards toe zoals nodig -->
+            </div>
+            <div class="navigation-dots">
+                <span class="dot" onclick="scrollToCard(0)"></span>
+                <span class="dot" onclick="scrollToCard(1)"></span>
+                <!-- Voeg meer dots toe zoals nodig -->
+            </div>
+        </section>
+        <section class="my-vehicles">
+            <h2>Mijn Voertuigen</h2>
+            <div class="vehicles">
+                <div class="vehicle-card">
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                    <p>BMW 116i <i class="fas fa-arrow-right"></i></p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                    <p>BMW 116i <i class="fas fa-arrow-right"></i></p>
+                </div>
+                <div class="vehicle-card">
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                    <p>BMW 116i <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+        </section>
+        <section class="recent-messages">
+            <h2>Recente Berichten</h2>
+            <table>
+                <tr>
+                    <th>TITEL</th>
+                    <th>DATUM</th>
+                </tr>
+                
+                <tr>
+                    <td>Belastingaangifte 2024</td>
+                    <td>Gisteren</td>
+                </tr>
+                
+                <tr>
+                    <td>Herinnering Keuring</td>
+                    <td>13 mei 2024</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <aside class="sidebar-right">
+        <section class="calendar">
+            <div class="contianer">
+                <div class="calendar">
+                  <div class="calendar-header">
+                    <span class="month-picker" id="month-picker"> May </span>
+                    <div class="year-picker" id="year-picker">
+                      <span class="year-change" id="pre-year">
+                        <pre><</pre>
+                      </span>
+                      <span id="year">2020 </span>
+                      <span class="year-change" id="next-year">
+                        <pre>></pre>
+                      </span>
+                    </div>
+                  </div>
+            
+                  <div class="calendar-body">
+                    <div class="calendar-week-days">
+                      <div>Sun</div>
+                      <div>Mon</div>
+                      <div>Tue</div>
+                      <div>Wed</div>
+                      <div>Thu</div>
+                      <div>Fri</div>
+                      <div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                    </div>
+                  </div>
+                  <div class="calendar-footer">
+                  </div>
+                  <div class="date-time-formate">
+                    <div class="day-text-formate">TODAY</div>
+                    <div class="date-time-value">
+                      <div class="time-formate">01:41:20</div>
+                      <div class="date-formate">03 - march - 2022</div>
+                    </div>
+                  </div>
+                  <div class="month-list"></div>
+                </div>
+              </div>
+            
+            <!-- Kalender inhoud -->
+        </section>
+        <section class="deadlines">
+
+            <h2>Deadlines</h2><a href="">woensdag 15 mei</a>
+            
+            <p>U heeft geen deadlines <br> tegen vandaag.</p>
+        </section>
+    </aside>
+    <script src="home.js"></script>
+</body>
+</html>

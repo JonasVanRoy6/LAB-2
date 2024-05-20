@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+  }
+  
+  .container {
+      display: flex;
+      width: 70%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+  }
+  
+  .login-section, .promo-section {
+      flex: 1;
+      padding: 40px;
+  }
+  
+  .login-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+  }
+  
+  p {
+      margin-bottom: 20px;
+      color: #666;
+  }
+  
+  .social-login {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+  }
+  
+  .social-login button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  
+  .social-login .google {
+      background-color: #db4437;
+      color: #fff;
+  }
+  
+  .social-login .facebook {
+      background-color: #4267b2;
+      color: #fff;
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+  }
+  
+  .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+  }
+  
+  .options a {
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  button[type="submit"] {
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+      background-color: #0056b3;
+  }
+  
+  .promo-section {
+      background-color: #007bff;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .promo-content {
+      max-width: 300px;
+  }
+  
+  .image-placeholder {
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+  }
+  
+  .dots {
+      margin-top: 20px;
+  }
+  
+  .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0.5;
+  }
+  
+  .dot.active {
+      opacity: 1;
+  }

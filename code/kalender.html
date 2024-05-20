@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="kalender.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>AutoMate</h2>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#"><div id="icon"><i class="fas fa-solid fa-house-user"></div></i> Home</a></li>
+                    <li ><a href="#"><div id="icon"><i class="fas fa-solid fa-inbox"></i></div></i> Inbox</a></li>
+                    <li><a href="#"><div id="icon"><i class="fas fa-solid fa-car"></i></div></i> Voertuigen</a></li>
+                    <li class="active"><a href="#"><div id="icon"><i class="fas fa-regular fa-calendar"></i></div></i> Kalender</a></li>
+                    <hr>
+                    <br>
+                    <p>algemeen</p>
+                    <li><a href="#"><div id="icon"><i class="fas fa-solid fa-bars"></i></div></i> Instellingen</a></li>
+                    <li><a href="#"><div id="icon"><i class="fas fa-solid fa-question"></div></i> Help</a></li>
+                </ul>
+            </nav>
+            <button class="logout"><i class="icon logout"></i> Logout</button>
+        </aside>
+        <main class="main-content">
+            <section class="inbox">
+                <header>
+                    <h1>Inbox</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Zoeken">
+                    </div>
+                    <div class="filters">
+                        <button class="filter active">Alles</button>
+                        <button class="filter">Gelezen</button>
+                        <button class="filter">Niet Gelezen</button>
+                    </div>
+                </header>
+                <ul class="messages">
+                    <li class="message">
+                        <h2>Belastingaangifte 2024</h2>
+                        <p>Beste bestuurder, We willen u informeren dat de belastingaangifte voor 2024 nu beschikbaar is...</p>
+                        <a href="#">Gisteren</a>
+                    </li>
+                    <li class="message">
+                        <h2>Belastingaangifte 2024</h2>
+                        <p>Beste bestuurder, We willen u informeren dat de belastingaangifte voor 2024 nu beschikbaar is...</p>
+                        <a href="#">Gisteren</a>
+                    </li>
+                    <li class="message">
+                        <h2>Belastingaangifte 2024</h2>
+                        <p>Beste bestuurder, We willen u informeren dat de belastingaangifte voor 2024 nu beschikbaar is...</p>
+                        <a href="#">Gisteren</a>
+                    </li>
+                    <li class="message">
+                        <h2>Belastingaangifte 2024</h2>
+                        <p>Beste bestuurder, We willen u informeren dat de belastingaangifte voor 2024 nu beschikbaar is...</p>
+                        <a href="#">Gisteren</a>
+                    </li>
+                    <!-- Herhaal bovenstaande <li> voor meerdere berichten -->
+                </ul>
+            </section>
+            <section class="message-detail">
+                <header>
+                    
+                    <div class="user-info">
+                        
+                        <span class="notification-icon"></span>
+                        <img src="images/jef.jpg" alt="">
+                        <div id="user">
+                            <span class="user-name">Naam User</span>
+                        <span class="user-email">naamuser@gmail.com</span>
+                    </div></div>
+                </header><div class="actions">
+                    
+                        <a href=""><i class="fas fa-solid fa-envelope"></i>Markeren als ongelezen</a>
+                        
+                        <a href=""><i class="fas fa-regular fa-star"></i>Belangrijk</a>
+                        
+                        <a href=""><i class="fas fa-solid fa-trash"></i>Verwijderen</a>
+                        
+                        <a href=""><i class="fas fa-solid fa-print"></i>Afdrukken</a>
+                    </div>
+                <article>
+                    <div id="belasting">
+                    <h2>Belastingaangifte 2024</h2>
+                    </div>
+                    <p>Beste bestuurder,</p>
+                    <p>We willen u informeren dat de belastingaangifte voor 2024 nu beschikbaar is. Het is belangrijk om op tijd te beginnen met het verzamelen van alle benodigde informatie met betrekking tot uw voertuig.</p>
+                    <p>Hier zijn enkele stappen die u kunt volgen om uw aangifte soepel te laten verlopen:</p>
+                    <ol>
+                        <li>Verzamel Documenten...</li>
+                        <li>Controleer Aftrekposten...</li>
+                        <li>Gebruik de Online Portaal...</li>
+                        <li>Belastingadviseur...</li>
+                        <li>Deadline...</li>
+                    </ol>
+                    <p>Als u vragen heeft of hulp nodig heeft...</p>
+                    <p>Met vriendelijke groet, [Uw Naam of Bedrijfsnaam]</p>
+                    <p>[Contactinformatie]</p>
+                </article>
+                <div class="attachments">
+                    <span>Bijlagen:</span>
+                    <div class="attachment">
+                        <i class="icon document"></i>
+                        Document
+                    </div>
+                    <div class="attachment">
+                        <i class="icon document"></i>
+                        Document
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
