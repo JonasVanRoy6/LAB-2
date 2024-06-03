@@ -1,0 +1,341 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+ hr{
+    color: grey;
+    height: 0.1px;
+ }
+ nav{
+    color: #666;
+ }
+
+
+  a, span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  body {
+      display: flex;
+      height: 100vh;
+  }
+  
+  .container {
+      display: flex;
+      width: 100%;
+  }
+  
+ /* start navigatiebar */
+
+.sidebar {
+    width: 240px;
+    background-color: #1A1919;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin-right: 54px;
+}
+
+.sidebar a{
+    color: #666666;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 50px 32px 32px 32px;
+}
+
+.nav-item span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    opacity: 100%;
+    padding: 12px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.nav-item.active {
+    background-color: #006AFF;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 12px 0 12px 16px;
+    color: white;
+}
+
+.nav-item.active span{
+    
+    color: white;
+}
+
+#algemeen{
+    margin: 24px 0;
+    margin-left: 32px;
+}
+
+.nav-item.logout {
+    background-color: #484747;
+    padding: 12px 0 12px 46px;
+    border-radius: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.logout span {
+    font-size: 16px;
+    color: white;
+}
+
+.general li:nth-last-child(2) {
+    margin-bottom: 186px;
+}
+
+
+
+
+.general {
+    color: #808080;
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    opacity: 20%;
+    margin: 4px 24px 28px 24px;
+}
+
+/* einde */
+  
+  .main-content {
+      display: flex;
+      flex: 1;
+      background-color: #f9f9f9;
+  }
+  
+  .inbox {
+      width: 35%;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+  }
+  
+  .inbox header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+  }
+  
+  .inbox header h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  
+  .inbox .search-bar {
+      margin-bottom: 10px;
+      margin-right: 60%;
+  }
+  
+  .inbox .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+  }
+  
+  .inbox .filters {
+      display: flex;
+      gap: 10px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 10px;
+      max-width: 100%;
+      margin-right: 50%;
+  }
+  
+  .inbox .filters .filter {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: white;
+      
+  }
+  
+  .inbox .filters .filter.active {
+      background-color: #007bff;
+      color: #fff;
+  }
+  
+  .inbox .messages {
+      list-style: none;
+  }
+  
+  .inbox .message {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  .inbox .message h2 {
+      font-size: 18px;
+  }
+  .inbox .message p {
+      color: #666;
+      margin: 5px 0;
+  }
+  
+  .inbox .message a {
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  .message-detail {
+      flex: 1;
+      padding: 20px;
+  }
+  
+  .message-detail header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+  
+  .message-detail .actions a {
+   
+      margin-right: 5%;
+      
+      text-decoration: none;
+     color: black;
+      
+      cursor: pointer;
+      border-radius: 5px;
+      
+  }
+
+  .message-detail .actions i {
+    margin-right: 10px;
+  }
+  .message-detail .actions{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .message-detail .user-info {
+      display: flex;
+      margin-left: 70%;
+      align-items: center;
+      padding: 10px;
+      background-color: white;
+      border-radius: 30px;
+  }
+
+  .message-detail .user-info img{
+    border-radius: 50%;
+    max-width: 20%;
+    
+    
+  }
+
+  #user{
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .message-detail .user-info .user-name {
+      margin-left: 20px;
+      margin-right: 10px;
+      font-weight: bold;
+  }
+  
+  .message-detail .user-info .user-email {
+      color: #666;
+      margin-left: 20px;
+  }
+  
+  .message-detail article h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  
+  .message-detail article p {
+      margin: 10px 0;
+      color: #333;
+  }
+  
+  .message-detail article ol {
+      margin: 10px 0;
+      padding-left: 20px;
+  }
+  
+  .attachments {
+      margin-top: 20px;
+  }
+  
+  .attachments span {
+      font-weight: bold;
+  }
+  
+  .attachments .attachment {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+  }
+  
+  .attachments .attachment .icon {
+      margin-right: 10px;
+  }
+
+  #belasting{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+
+ #icon{
+    margin-right: 5%;
+ }
+
+ 
