@@ -12,7 +12,7 @@ body {
     width: 100%;
 }
 
-h1, h2, p, a, td, th, h3, span{
+h1, h2, p, a, td, th, h3, button{
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
@@ -21,7 +21,7 @@ h1, h2, th {
     font-weight: 700;
 }
 
-p, td ,span{
+p, td {
     font-weight: 400;
 }
 
@@ -29,7 +29,7 @@ a {
     font-weight: 300;
     text-decoration: none;
 }
- span{
+ span, button{
     
     font-weight: 300;
     font-style: normal;
@@ -153,7 +153,7 @@ hr {
 /* einde */
 
 main {
-    flex: 1;
+width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -209,146 +209,7 @@ header {
     color: #007bff;
 }
 
-.content {
-    flex: 1;
-    
-}
 
-.profile-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-   
-}
-
-.profile-section h2 {
-    margin-top: 0;
-}
-
-.profile-info,
-.personal-info,
-.address-info {
-    margin-bottom: 20px;
-    border: 1px solid #e3e4e6; /* De rand is 1px dik en zwart van kleur */
-    padding: 30px;
-    border-radius: 20px;
-}
-/* test */
-.profile-info{
-    flex-grow: 1;
-    padding: 20px;
-    background-color: white;
-    border-radius: 20px;
-    
-}
-
-.text-content{
-    margin-left: 20px;
-    
-}
-.buttonweg button{
-    max-height: 35px;
-    top: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;   
-}
-
-
-.info2{
-    display: flex;
-
-}
-
-.buttonweg{
-    display: flex;
-    justify-content: space-between;
-}
-
-.profile-info img{
-    width: 100px;
-    height: 100px;
-}
-
-.info-container {
-    position: relative;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.info-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.info-item strong {
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.edit-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.edit-button:hover {
-    background-color: #2980b9;
-}
-/* tot hier */
-.profile-info .info,
-.personal-info .info-grid,
-.address-info .info-grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.profile-info .info img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-button {
-    background-color: #0062ff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-hr.vertical {
-    margin-right: 2%;
-    width: 1px; 
-    
-    height: 740px; /* Hoogte van de lijn */
-    background-color: #e3e4e6; /* Kleur van de lijn */
-    border: none; /* Geen rand */
-}
 /* user*/
 #user{
     display: flex;
@@ -392,65 +253,166 @@ hr.vertical {
     margin-bottom: 20px;
 }
 
-
-#openOverlay {
+hr.vertical {
+    margin-right: 2%;
+    width: 1px; 
     
-   
+    height: 740px; /* Hoogte van de lijn */
+    background-color: #e3e4e6; /* Kleur van de lijn */
+    border: none; /* Geen rand */
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 73.4%;
+    gap: 20px; 
+    padding: 20px;/* Voeg een gap toe voor ruimte tussen de kaarten */
+}
+
+.kaart {
+    display: flex;
+    
+    gap: 20px; /* Voeg een gap toe voor ruimte tussen de kaarten */
+    width: 100%; /* Zorg ervoor dat de kaarten in een rij passen */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Zorg ervoor dat de kaarten 50% van de breedte nemen minus de gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card img {
+    width: 40px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card .expired {
+    color: red;
+}
+
+.card .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card .actions button, .card .actions .trash {
+    background: none;
+    border: none;
     cursor: pointer;
+    color: #888;
+}
+
+.card .standard {
+    color: #888;
+    font-size: 12px;
+}
+
+.card .set-standard {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.add-card {
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(54% - 20px); /* Zorg ervoor dat de add-card 50% van de breedte neemt minus de gap */
+    padding: 20px;
+    color: #007bff;
+    font-size: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+h2{
+    margin-bottom: -50%;
 }
 
 .overlay {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .overlay-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    
+    
 }
 
-.profile-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.upload-section {
-    margin: 20px 0;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.file-upload {
-    display: none; /* Hidden input */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-.upload-label {
-    display: inline-block;
-    padding: 30px 150px;
-    background-color: white;
-    color:#006AFF;
-    cursor: pointer;
-    border-radius: 5px;
-    border: solid 1px #e3e4e6;
-   
-}
-
-.upload-label img{
+.input-with-icon {
     display: flex;
-    margin-left: 32px;
-    width: 50px;
+    align-items: center;
 }
 
-.buttons {
+.input-with-icon img {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.form-buttons {
     display: flex;
    justify-content: flex-end;
     font-style: bold;
@@ -458,24 +420,24 @@ hr.vertical {
 }
 
 
-.buttons button {
+.form-buttons button {
    font-size: 1em;
     font-weight: bold;
 }
 
 
-#cancelButton {
+.cancel-btn {
     background-color: white; 
     border: 1px solid #ddd;
     padding: 20px;
     width: 30%;
     border-radius: 15px;
     margin-right: 20px;
-    color: black;
+    
 }
 
 
-#saveButton {
+.save-btn {
     background-color: #007bff;
     padding: 20px;
     width: 30%;
@@ -485,89 +447,85 @@ hr.vertical {
    
 }
 
-.add-btn:hover {
+.save-btn:hover {
     background-color: #2980b9;
 }
 
 
-/* 2e overlay */
-.form-group {
-    
-    margin: 10px 0;
-    text-align: left;
-    padding-left: 50px;
-    padding-right: 50px;
+
+#overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
+.overlay.hidden {
+    display: none;
 }
 
-.form-group input {
+.overlay-content2 {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+}
+.overlay-content2 p{
+    color:#666666;
+}
+.card-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    border: solid 1px #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-info img {
+    width: 40px;
+    margin-right: 10px;
+    padding: 5px;
+    border: solid 1px #ddd;
     border-radius: 5px;
 }
 
-.phone-input {
+
+.card-info span {
+    display: block; /* Make spans block-level elements */
+    text-align: start;
+    margin-left: 5px;
+}
+.buttons {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.phone-input img {
-    margin-right: 10px;
-}
-
-
-#cancelInfoButton {
-    background-color: white; 
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 40%;
-    border-radius: 15px;
-    margin-right: 20px;
-    color: black;
-}
-
-
-#saveInfoButton {
-    background-color: #007bff;
-    padding: 20px;
-    width: 40%;
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
+    border-radius: 5px;
+}
+
+#cancelButton {
+    background: lightgray;
+}
+
+#deleteButton {
+    background: #007bff;
     color: white;
-    border-radius: 15px;
-   
 }
 
-#saveInfoButton :hover {
-    background-color: #2980b9;
-}
-
-
-#cancelAddressButton {
-    background-color: white; 
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 40%;
-    border-radius: 15px;
-    margin-right: 20px;
-    color: black;
-}
-
-
-#saveAddressButton{
-    background-color: #007bff;
-    padding: 20px;
-    width: 40%;
-    border: none;
-    color: white;
-    border-radius: 15px;
-   
-}
-
-#saveAddressButton :hover {
-    background-color: #2980b9;
+.gegevens{
+    display: block;
+    
 }

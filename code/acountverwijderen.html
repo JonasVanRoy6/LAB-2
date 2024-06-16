@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instellingen</title>
+    <link rel="stylesheet" href="accountverwijderen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item active">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main>
+            <header>
+                   
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="settings">
+                <div class="sidebar-settings">
+                    <ul>
+                        <a href="instellingen.html">
+                        <li >Mijn Profiel</li></a>
+                        <a href="betaalmethodes.html">
+                        <li >Betaalmethodes</li></a>
+                        <a href="meldingen.html">
+                        <li >Meldingen</li></a>
+                        <a href="weergave.html">
+                        <li >Weergave</li></a>
+                        <a href="documenten.html">
+                        <li>Documenten</li></a>
+                        <a href="Transactiegeschiedenis.html">
+                        <li>Transactiegeschiedenis</li></a>
+                        <a href="acountverwijderen.html">
+                        <li class="active">Account Verwijderen</li></a>
+                    </ul>
+                </div>
+                <hr class="vertical">
+                
+                <div class="container2">
+                    <h1>Account Verwijderen</h1>
+                    <div class="tekstvak">
+                    <p><strong>U staat op het punt om uw account te verwijderen</strong></p>
+                    <p>Let op: Het verwijderen van uw account is permanent en kan niet ongedaan worden gemaakt. Alle gegevens zullen verloren gaan.</p>
+                    <p>Gevolgen van het verwijderen van uw account:</p>
+                    <ul>
+                        <li>Verlies van toegang tot al uw voertuiggegevens en diensten.</li>
+                        <li>U zult geen herinneringen of meldingen meer ontvangen over betalingen of andere voertuiggerelateerde zaken.</li>
+                    </ul>
+                    <p>Vertel ons waarom u uw account wilt verwijderen</p>
+                    <textarea placeholder="Laat hier je bericht achter"></textarea>
+                    <div class="button-container">
+                        
+                    <button id="delete-account-btn">Account Verwijderen</button></div></div>
+                </div>
+
+                <div id="overlay" class="overlay">
+                    <div class="overlay-content">
+                        <img src="images/vuilbak.png" alt="Delete Icon" class="icon"> <!-- Use your own icon here -->
+                        <h2>Account verwijderen?</h2>
+                        <p>U zal alle data van uw account verliezen wanneer u uw account verwijdert. Deze actie is onomkeerbaar.</p>
+                        <button id="cancel-btn" class="cancel-btn">Nee! Ik heb me bedacht</button>
+                        <button class="delete-btn">Account Verwijderen</button>
+                    </div>
+                </div>
+            
+                <script src="verwijder.js"></script>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

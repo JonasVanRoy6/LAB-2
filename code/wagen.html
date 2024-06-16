@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoMate Dashboard</title>
-    <link rel="stylesheet" href="help.css">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="wagen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -18,7 +18,7 @@
                 <img src="images/logo.png" alt="logo">
             </div>
             <ul class="nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <i class='bx bxs-home' ></i>
                     <a href="index.html"><span>Home</span></a>
                 </li>
@@ -42,7 +42,7 @@
                     <i class='bx bx-cog' ></i>
                     <a href="instellingen.html"><span>Instellingen</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <i class='bx bxs-help-circle' ></i>
                     <a href="help.html"><span>Help</span></a>
                 </li>
@@ -52,7 +52,7 @@
                 </div>
             </ul>
         </section>
-        <main class="content">
+        <main class="main-content">
             <header>
                     
                 <div class="user-info">
@@ -64,31 +64,55 @@
                     <span class="user-email">naamuser@gmail.com</span>
                 </div></div>
             </header>
-            <section class="contact-section">
-                <div class="sidebar-menu">
-                    <a href="help.html" class="active">Contact Opnemen</a>
-                    <a href="gebruiksvoorwaarden.html">Gebruikersvoorwaarden</a>
-                    <a href="privacybeleid.html">Privacybeleid</a>
-                    <a href="instructies.html">Instructies</a>
+            <section class="voertuig">
+                <div class="progress"> 
+                    <div class="active" >Wagen</div>
+                    <div>Verzekering</div>
+                    <div>Gegevens</div>
+                    <div>Resultaten</div>
                 </div>
-                <hr class="vertical">
-                <div class="contact-form">
-                    <h1>Contact Opnemen</h1>
-                    <form>
-                        <h2>Contacteer ons</h2>
-                        <label for="firstName">Voornaam</label>
-                        <input type="text" id="firstName" name="firstName" value="" placeholder="voornaam">
-                        <label for="lastName">Achternaam</label>
-                        <input type="text" id="lastName" name="lastName" value="" placeholder="achternaam">
-                        <label for="email">E-mailadres</label>
-                        <input type="email" id="email" name="email" value="" placeholder="email">
-                        <label for="message">Bericht</label>
-                        <textarea id="message" name="message" placeholder="Laat hier je bericht achter"></textarea>
-                        <button type="submit">Verstuur</button>
-                    </form>
+                <div class="title">Wagen</div>
+                <div class="inhoud">
+                <div class="form-group">
+                    <label>Ben je de eerste eigenaar van deze wagen?</label>
+                    <div class="toggle-buttons">
+                        <button class="active" onclick="toggleButton(this)">Ja</button>
+                        <button onclick="toggleButton(this)">Nee</button>
+                    </div>
                 </div>
-            </section>
+                <div class="form-group">
+                    <label>Hoeveel kilometers rijd je per jaar?</label>
+                    <input type="text"><span>km</span>
+                </div>
+                <div class="form-group">
+                    <label>Welke rijhulpsystemen heb je?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Dodehoekwaarschuwing</label>
+                        <label><input type="checkbox" checked> Rijstrookondersteuning</label>
+                        <label><input type="checkbox"> Cruise control vertraagt t.t.v. voorligger</label>
+                        <label><input type="checkbox" checked> Noodstopsysteem</label>
+                        <label><input type="checkbox" checked> Vermoeidheidsdetectie</label>
+                        <label><input type="checkbox"> Parkeerhulpsysteem</label>
+                        <label><input type="checkbox"> Automatische noodoproep bij ongeval</label>
+                        <label><input type="checkbox" checked> Detectie zwakke weggebruikers</label>
+                    </div></div>
+                <div class="buttons">
+                    
+                    <button id="cancel-button" class="cancel-btn"><a href="voertuigverzekeren.html">Vorige</a></button>
+                    <button id="add-button" class="add-btn" disabled><a href="wagen.html">Volgende</a></button>
+                </div></div>
+                </section>
         </main>
     </div>
+    </div>
+    <script>
+        function toggleButton(button) {
+            var buttons = button.parentElement.getElementsByTagName('button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            button.classList.add('active');
+        }
+    </script>
 </body>
 </html>

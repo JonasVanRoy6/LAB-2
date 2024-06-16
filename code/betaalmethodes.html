@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instellingen</title>
+    <link rel="stylesheet" href="betaalmethodes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item active">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main>
+            <header>
+                   
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="settings">
+                <div class="sidebar-settings">
+                    <ul>
+                        <a href="instellingen.html">
+                        <li >Mijn Profiel</li></a>
+                        <a href="betaalmethodes.html">
+                        <li class="active">Betaalmethodes</li></a>
+                        <a href="meldingen.html">
+                        <li >Meldingen</li></a>
+                        <a href="weergave.html">
+                        <li>Weergave</li></a>
+                        <a href="documenten.html">
+                        <li>Documenten</li></a>
+                        <a href="Transactiegeschiedenis.html">
+                        <li>Transactiegeschiedenis</li></a>
+                        <a href="acountverwijderen.html">
+                        <li>Account Verwijderen</li></a>
+                    </ul>
+                </div>
+                <hr class="vertical">
+                
+                <div class="container2"><h2>Betaalmethodes</h2>
+                    <div class="kaart">
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+                            <p>**** 1234 | Vervalt 06/27</p>
+                            <p>Jelle De Boeck</p>
+                            <p class="standard">Standaard betaalmethode</p>
+                            <div class="actions">
+                                <button>Bewerken</button>
+                        
+                                <button class="trash" id="showOverlay">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+                            <p>**** 5678 | Vervalt 06/24</p>
+                            <p>Jelle De Boeck</p>
+                            <p class="expired">Deze kaart is vervallen</p>
+                            <div class="actions">
+                                <button>Bewerken</button>
+                                <button class="trash" id="showOverlay">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kaart">
+                        <div class="card">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Maestro_2016.svg/1200px-Maestro_2016.svg.png" alt="Maestro">
+                            <p>**** 890 | Vervalt 06/28</p>
+                            <p>Jelle De Boeck</p>
+                            <button class="set-standard">Instellen als Standaard</button>
+                            <div class="actions">
+                                <button>Bewerken</button>
+                                <button class="trash" id="showOverlay">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="add-card" id="edit-button">
+                            <span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlays" class="overlay">
+                    <div class="overlay-content">
+                        
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="first-name">Voornaam</label>
+                                <input type="text" id="first-name" name="first-name" value="Jelle" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Achternaam</label>
+                                <input type="text" id="last-name" name="last-name" value="De Boeck" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Kaartnummer</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="card-number" name="card-number" value="6789 5678 4567 1234" required>
+                                    <img src="images/master.png" alt="MasterCard">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiry-date">Vervaldatum</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="expiry-date" name="expiry-date" value="06/27" required>
+                                    <img src="images/agendaicon.png" alt="Calendar">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="cvv" name="cvv" value="123" required>
+                                    <img src="images/cvv.png" alt="CVV">
+                                </div>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" id="cancel-button" class="cancel-btn">Annuleren</button>
+                                <button type="submit" class="save-btn">Opslaan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            <div id="overlay" class="overlay">
+                    <div class="overlay-content">
+                        <h1>Weet u zeker dat u deze kaart wilt verwijderen?</h1>
+                        <p>Deze creditcard zal worden verwijderd.</p>
+                        <div class="card-info">
+                            <img src="images/master.png" alt="Mastercard">
+                            <div class="gegevens">
+                            <span>**** 1234 | Vervalt 06/27</span>
+                            
+                            <span>Jelle De Boeck</span></div>
+                        </div>
+                        <div class="buttons">
+                            <button id="cancelButton">Annuleren</button>
+                            <button id="deleteButton">Verwijderen</button>
+                        </div>
+                    </div>
+                </div>
+            
+               
+            
+                <script src="betaal.js"></script>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

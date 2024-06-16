@@ -1,23 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
     height: 100vh;
-    background-color: #f9f9f9;
     margin-right: 2%;
+    background-color: #f9f9f9;
 }
 
-h1, h2, p, a, td, th, spane {
+.container {
+    display: flex;
+    width: 100%;
+}
+
+h1, h2, p, a, td, th, h3, h4{
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
 
-h1, h2, th {
+h1, h2, th, h4{
     font-weight: 700;
 }
 
@@ -28,7 +28,6 @@ p, td {
 a {
     font-weight: 300;
     text-decoration: none;
-    font-style: normal;
 }
  span{
     
@@ -36,28 +35,26 @@ a {
     font-style: normal;
   }
 
-  p, label{
+  p, label, li{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
 
-  a, span{
+  
+strong{
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-
-.container {
-    display: flex;
-    width: 100%;
-}
-
-/* start navigatiebar */
-
-.sidebar {
+    font-weight: 700;
     
+}
+/* start navigatiebar */
+hr {
+    color: grey;
+    height: 0.1px;
+}
+.sidebar {
+    width: 240px;
     background-color: #1A1919;
     display: flex;
     flex-direction: column;
@@ -154,144 +151,67 @@ a {
 }
 
 /* einde */
-.content {
-    flex: 1;
-    background-color: #f9f9f9;
+
+
+main {
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-
-
-.icons {
-    display: flex;
-    margin-right: 20px;
-}
-
-.icons .icon {
-    margin: 0 5px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-hr.vertical {
-    margin-right: 2%;
-    width: 1px; 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        
+    }
     
-    height: 740px; /* Hoogte van de lijn */
-    background-color: #e3e4e6; /* Kleur van de lijn */
-    border: none; /* Geen rand */
-}
-.contact-section {
-    display: flex;
-    padding: 20px;
     
-    background-color: white;
-    border-radius: 20px;
     
-}
-
-.sidebar-menu {
-    width: 330px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    margin-top:  8.8%;
-    padding-left: 1.5%;
-    padding-right: 4%;
-}
-
-.sidebar-menu a {
+    .settings {
+        display: flex;
+        flex: 1;
+        
+        padding: 20px;
+        
+        background-color: white;
+        border-radius: 20px;
     
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: #999999;
-    font-weight: 500;
+    }
     
-}
+    .sidebar-settings {
+        width: 330px;
+        background-color: white;
+        
+        
+    }
+    
+    .sidebar-settings ul {
+        list-style: none;
+        padding: 0;
+        max-width: 210px;
+        margin-left: 40px;
+        margin-top: 77px;
+    }
+    
+    .sidebar-settings ul li {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #999999;
+        margin-bottom: 5px;
+    }
+    
+    .sidebar-settings ul li.active,
+    .sidebar-settings ul li:hover {
+        background-color: rgba(0, 123, 255, 0.2);
+        color: #007bff;
+    }
+    
 
-.sidebar-menu a.active,
-.sidebar-menu a:hover {
-    background-color: rgba(0, 123, 255, 0.2);
-    color: #007bff;
-}
-
-.contact-form {
-    flex: 1;
-   
-}
-
-
-
-form{
-    border: 1px solid #e3e4e6; /* De rand is 1px dik en zwart van kleur */
-    padding: 30px;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-
-form h2{
-    font-size: 20px;
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
-}
-
-.contact-form h1 {
-    margin-bottom: 2%;
-    margin-top: 2%;
-    font-size: 30px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form form label {
-    margin-bottom: 5px;
-}
-
-.contact-form form input,
-.contact-form form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form form textarea {
-    height: 100px;
-    resize: none;
-}
-
-.contact-form form button {
-    padding: 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* user*/
+    /* user*/
 #user{
     display: flex;
     flex-direction: column;
@@ -328,8 +248,69 @@ form h2{
     font-size: 0.8em;
 }
 
- header {
+header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+hr.vertical {
+    margin-right: 2%;
+    width: 1px; 
+    
+    height: 740px; /* Hoogte van de lijn */
+    background-color: #e3e4e6; /* Kleur van de lijn */
+    border: none; /* Geen rand */
+}
+
+.theme-options, .accent-color-options {
+    display: flex;
+    gap: 20px;
+}
+.theme-option, .accent-color-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.theme-option input, .accent-color-option input {
+    display: none;
+}
+.theme-option label, .accent-color-option label {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.theme-option input:checked + label, .accent-color-option input:checked + label {
+    border-color: #007bff;
+}
+.theme-option img, .accent-color-option div {
+    width: 150px;
+    height: 90px;
+    border-radius: 10px;
+}
+.accent-color-option div {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+.language-select {
+    margin-top: 20px;
+}
+
+.container2 {
+   width: 73.4%;
+    
+    background: #fff;
+    padding: 20px;
+    
+    
+}
+
+.horizontaal{
+    height: 1px;
+    border-style: none;
+    background-color: #e3e4e6;
+    
 }

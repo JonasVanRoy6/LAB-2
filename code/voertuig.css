@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    margin-right: 2%;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.voertuig {
+    background-color: white;
+    width: 1500px;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+h1, h2, p, a, td, th, h3, h4{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+h1, h2, th, h4{
+    font-weight: 700;
+}
+
+p, td {
+    font-weight: 400;
+}
+
+a {
+    font-weight: 300;
+    text-decoration: none;
+}
+ span{
+    
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  p, label, li{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+header h1{
+    width: 300px;
+}
+  
+strong{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    
+}
+/* start navigatiebar */
+hr {
+    color: grey;
+    height: 0.1px;
+}
+.sidebar {
+    width: 240px;
+    background-color: #1A1919;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin-right: 54px;
+}
+
+.sidebar a{
+    color: #666666;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 50px 32px 32px 32px;
+}
+
+.nav-item span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    opacity: 100%;
+    padding: 12px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.nav-item.active {
+    background-color: #006AFF;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 12px 0 12px 16px;
+    color: white;
+}
+
+.nav-item.active span{
+    
+    color: white;
+}
+
+#algemeen{
+    margin: 24px 0;
+    margin-left: 32px;
+}
+
+.nav-item.logout {
+    background-color: #484747;
+    padding: 12px 0 12px 46px;
+    border-radius: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.logout span {
+    font-size: 16px;
+    color: white;
+}
+
+.general li:nth-last-child(2) {
+    margin-bottom: 186px;
+}
+
+
+
+
+.general {
+    color: #808080;
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    opacity: 20%;
+    margin: 4px 24px 28px 24px;
+}
+
+/* einde */
+
+
+   /* user*/
+   #user{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+   .user-info {
+    display: flex;
+    margin-left: 80%;
+    
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+ .user-info img{
+  border-radius: 50%;
+  max-width: 15%;
+  
+  
+}
+
+ .user-info .user-name {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+ .user-info .user-email {
+    color: #666;
+    margin-left: 20px;
+    font-size: 0.8em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.selection {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.vehicle {
+    border: 2px solid #e1e1e1;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+}
+.vehicle img {
+    width: 400px;
+    height: auto;
+}
+.vehicle.selected {
+    border-color: #007bff;
+}
+.buttons {
+    margin-top: 20%;
+    display: flex;
+   justify-content: center;
+    font-style: bold;
+
+}
+
+.vehicle div{
+    color: #006AFF;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+
+.buttons button {
+   font-size: 1em;
+    font-weight: bold;
+}
+
+
+.cancel-btn {
+    background-color: white; 
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 15%;
+    border-radius: 15px;
+    margin-right: 20px;
+    color: black;
+}
+
+.cancel-btn a{
+    color: black;
+    font-weight: 400;
+}
+
+.add-btn {
+    background-color: #007bff;
+    padding: 20px;
+    width: 15%;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    
+   
+}
+
+.add-btn a{
+    color: white;
+    font-weight: 400;
+}
+
+.voertuig h1{
+    font-size: 2em;
+}
+

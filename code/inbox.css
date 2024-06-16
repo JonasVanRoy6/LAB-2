@@ -5,21 +5,26 @@ body{
     font-family: Arial, sans-serif;
   }
   
-  h1{
+  h1, h2, p, a, td, th, button {
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
     font-style: normal;
-  }
+}
 
-  h2{
-    font-family: "Poppins", sans-serif;
+h1, h2, th {
     font-weight: 700;
-    font-style: normal;
-  }
+}
 
-  p{
-    font-family: "Poppins", sans-serif;
+p, td {
     font-weight: 400;
+}
+
+a, button {
+    font-weight: 300;
+    text-decoration: none;
+}
+ span{
+    
+    font-weight: 300;
     font-style: normal;
   }
 
@@ -32,11 +37,7 @@ body{
  }
 
 
-  a, span{
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
+  
   body {
       display: flex;
       height: 100vh;
@@ -55,7 +56,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 24px;
-    margin-right: 54px;
+    
 }
 
 .sidebar a{
@@ -155,9 +156,10 @@ body{
   }
   
   .inbox {
-      width: 35%;
+      width: 30%;
       border-right: 1px solid #ddd;
       padding: 20px;
+      margin-left: 2%;
   }
   
   .inbox header {
@@ -173,47 +175,71 @@ body{
   
   .inbox .search-bar {
       margin-bottom: 10px;
-      margin-right: 60%;
+      margin-right: 6%;
   }
   
   .inbox .search-bar input {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
       border: 1px solid #ddd;
-      border-radius: 10px;
+      border-radius: 15px;
   }
   
   .inbox .filters {
       display: flex;
+      justify-content: space-around;
       gap: 10px;
       background-color: white;
-      padding: 5px;
-      border-radius: 10px;
+      padding: 7px;
+      border-radius: 15px;
+      border: 1px solid #ddd;
       max-width: 100%;
-      margin-right: 50%;
+
+      
   }
   
   .inbox .filters .filter {
-      padding: 5px 10px;
+      padding: 10px 20px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
       background-color: white;
+      font-size: 1em;
       
   }
   
   .inbox .filters .filter.active {
       background-color: #007bff;
       color: #fff;
+      
   }
+
+  .message h2::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Adjust based on the padding-left of .message */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Size of the dot */
+    height: 10px; /* Size of the dot */
+    background-color: #006AFF; /* Color of the dot */
+    border-radius: 50%;
+}
   
+
+.message h2 {
+    position: relative;
+    margin: 0;
+    display: inline-block; /* Ensure h2 takes up only the necessary width */
+}
   .inbox .messages {
       list-style: none;
   }
-  
+  /* niet gelezen */
   .inbox .message {
       padding: 15px;
       border-bottom: 1px solid #ddd;
+      margin-left: -10%;
   }
   
   .inbox .message h2 {
@@ -228,6 +254,45 @@ body{
       color: #007bff;
       text-decoration: none;
   }
+
+   /* gelezen */
+  .inbox .messageg {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-left: -10%;
+}
+
+.inbox .messageg h2 {
+    font-size: 18px;
+}
+.inbox .messageg p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.inbox .messageg a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.messageg h2::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Adjust based on the padding-left of .message */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Size of the dot */
+    height: 10px; /* Size of the dot */
+     /* Color of the dot */
+    border-radius: 50%;
+}
+  
+
+.messageg h2 {
+    position: relative;
+    margin: 0;
+    display: inline-block; /* Ensure h2 takes up only the necessary width */
+}
   
   .message-detail {
       flex: 1;

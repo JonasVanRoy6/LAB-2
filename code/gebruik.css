@@ -12,7 +12,7 @@ body {
     margin-right: 2%;
 }
 
-h1, h2, p, a, td, th, spane {
+h1, h2, p, a, td, th, spane, li {
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
@@ -25,7 +25,7 @@ p, td {
     font-weight: 400;
 }
 
-a {
+a, li {
     font-weight: 300;
     text-decoration: none;
     font-style: normal;
@@ -225,72 +225,6 @@ hr.vertical {
     background-color: rgba(0, 123, 255, 0.2);
     color: #007bff;
 }
-
-.contact-form {
-    flex: 1;
-   
-}
-
-
-
-form{
-    border: 1px solid #e3e4e6; /* De rand is 1px dik en zwart van kleur */
-    padding: 30px;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-
-form h2{
-    font-size: 20px;
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
-}
-
-.contact-form h1 {
-    margin-bottom: 2%;
-    margin-top: 2%;
-    font-size: 30px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form form label {
-    margin-bottom: 5px;
-}
-
-.contact-form form input,
-.contact-form form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form form textarea {
-    height: 100px;
-    resize: none;
-}
-
-.contact-form form button {
-    padding: 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* user*/
 #user{
     display: flex;
@@ -333,3 +267,20 @@ form h2{
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
+
+.container2 {
+    width: 73.4%;
+     
+     background: #fff;
+     padding: 20px;
+     
+     
+ }
+
+ .border{
+    border: solid 1px #e3e4e6;
+    padding: 20px;
+    border-radius: 15px;
+    height: 600px;
+ }

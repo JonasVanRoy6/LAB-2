@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instellingen</title>
+    <link rel="stylesheet" href="weergave.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item active">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main>
+            <header>
+                   
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="settings">
+                <div class="sidebar-settings">
+                    <ul>
+                        <a href="instellingen.html">
+                        <li >Mijn Profiel</li></a>
+                        <a href="betaalmethodes.html">
+                        <li >Betaalmethodes</li></a>
+                        <a href="meldingen.html">
+                        <li >Meldingen</li></a>
+                        <a href="weergave.html">
+                        <li class="active">Weergave</li></a>
+                        <a href="documenten.html">
+                        <li>Documenten</li></a>
+                        <a href="Transactiegeschiedenis.html">
+                        <li>Transactiegeschiedenis</li></a>
+                        <a href="acountverwijderen.html">
+                        <li>Account Verwijderen</li></a>
+                    </ul>
+                </div>
+                <hr class="vertical">
+                
+                <div class="container2">
+                    <h1>Weergave</h1>
+                    <hr class="horizontaal">
+                    <div class="section">
+                        <h2>Thema</h2>
+                        <div class="theme-options">
+                            <div class="theme-option">
+                                <input type="radio" id="light" name="theme" checked>
+                                <label for="light">
+                                    <img src="images/wit.png" alt="Light Theme">
+                                    Light
+                                </label>
+                            </div>
+                            <div class="theme-option">
+                                <input type="radio" id="dark" name="theme">
+                                <label for="dark">
+                                    <img src="images/zwart.png" alt="Dark Theme">
+                                    Donker
+                                </label>
+                            </div>
+                            <div class="theme-option">
+                                <input type="radio" id="system" name="theme">
+                                <label for="system">
+                                    <img src="images/wit.png" alt="System Theme">
+                                    Systeem
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="horizontaal">
+                    <div class="section">
+                        <h2>Accentkleur</h2>
+                        <div class="accent-color-options">
+                            <div class="accent-color-option">
+                                <input type="radio" id="color1" name="accent-color">
+                                <label for="color1">
+                                    <div style="background-color: #d0e1ff;"></div>
+                                </label>
+                            </div>
+                            <div class="accent-color-option">
+                                <input type="radio" id="color2" name="accent-color">
+                                <label for="color2">
+                                    <div style="background-color: #9abfff;"></div>
+                                </label>
+                            </div>
+                            <div class="accent-color-option">
+                                <input type="radio" id="color3" name="accent-color" checked>
+                                <label for="color3">
+                                    <div style="background-color: #0066ff;"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="horizontaal">
+                    <div class="section">
+                        <h2>Taal</h2>
+                        <div class="language-select">
+                            <select>
+                                <option value="nl" selected>Nederlands</option>
+                                <option value="en">Engels</option>
+                                <option value="de">Duits</option>
+                                <option value="fr">Frans</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

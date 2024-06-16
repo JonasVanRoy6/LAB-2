@@ -67,27 +67,36 @@
             <section class="settings">
                 <div class="sidebar-settings">
                     <ul>
-                        <li class="active">Mijn Profiel</li>
-                        <li>Betaalmethodes</li>
-                        <li>Meldingen</li>
-                        <li>Voorkeuren</li>
-                        <li>Documenten</li>
-                        <li>Transactiegeschiedenis</li>
-                        <li>Account Verwijderen</li>
+                        <a href="instellingen.html">
+                        <li class="active">Mijn Profiel</li></a>
+                        <a href="betaalmethodes.html">
+                        <li >Betaalmethodes</li></a>
+                        <a href="meldingen.html">
+                        <li >Meldingen</li></a>
+                        <a href="weergave.html">
+                        <li>Weergave</li></a>
+                        <a href="documenten.html">
+                        <li>Documenten</li></a>
+                        <a href="Transactiegeschiedenis.html">
+                        <li>Transactiegeschiedenis</li></a>
+                        <a href="acountverwijderen.html">
+                        <li>Account Verwijderen</li></a>
                     </ul>
                 </div>
+                <hr class="vertical">
                 <div class="content">
                     <div class="profile-section">
                         <h2>Mijn Profiel</h2>
                         <div class="profile-info">
-                            <div class="info">
-                                <img src="images/jef.jpg" alt="Jelle De Boeck">
+                            <div class="buttonweg">
+                            <div class="info2">
+                                <img src="images/persoon.png" alt="Jelle De Boeck">
                                 <div class="text-content">
                                     <h3>Jelle De Boeck</h3>
                                     <p>dbjelle@gmail.com</p>
                                 </div>
                             </div>
-                            <button>Bewerken</button>
+                            <button   id="openOverlay">Bewerken</button></div>
                         </div>
                         <div class="profile-info">
                             <h3>Mijn Profiel</h3>
@@ -110,7 +119,7 @@
                                         <span>+32 123 456 789</span>
                                     </div>
                                 </div>
-                                <button class="edit-button">Bewerken</button>
+                                <button class="edit-button" id="openInfoOverlay">Bewerken</button>
                             </div>
                         </div>
                         <div class="profile-info">
@@ -134,11 +143,85 @@
                                     <span>1234</span>
                                 </div>
                             </div>
-                            <button class="edit-button">Bewerken</button>
+                            <button class="edit-button" id="openAddressOverlay">Bewerken</button>
                         </div>
                     </div>
                     </div>
                 </div>
+                <div id="overlay" class="overlay">
+                    <div class="overlay-content">
+                        <h2>Profielfoto wijzigen</h2>
+                        <img src="images/persoon.png" alt="Profile Icon" class="profile-icon">
+                        <div class="upload-section">
+                            <input type="file" id="fileUpload" class="file-upload">
+                            <label for="fileUpload" class="upload-label"> <img src="images/upload.png" alt="">Foto uploaden</label>
+                        </div>
+                        <div class="buttons">
+                            <button id="cancelButton" class="button">Annuleren</button>
+                            <button id="saveButton" class="button save-button">Opslaan</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="infoOverlay" class="overlay">
+                    <div class="overlay-content">
+                        <h2>Persoonlijke Informatie</h2>
+                        <form id="infoForm">
+                            <div class="form-group">
+                                <label for="firstName">Voornaam</label>
+                                <input type="text" id="firstName" name="firstName" value="Jelle">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Achternaam</label>
+                                <input type="text" id="lastName" name="lastName" value="De Boeck">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mailadres</label>
+                                <input type="email" id="email" name="email" value="dbjelle@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefoon</label>
+                                <div class="phone-input">
+                                    <img src="images/vlag.png" alt="BE Flag">
+                                    <input type="text" id="phone" name="phone" value="123 456 789">
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" id="cancelInfoButton" class="button">Annuleren</button>
+                                <button type="submit" id="saveInfoButton" class="button save-button">Opslaan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="addressOverlay" class="overlay">
+                    <div class="overlay-content">
+                        <h2>Adres</h2>
+                        <form id="addressForm">
+                            <div class="form-group">
+                                <label for="street">Straat</label>
+                                <input type="text" id="street" name="street" value="Voorbeeldlaan">
+                            </div>
+                            <div class="form-group">
+                                <label for="houseNumber">Huisnummer</label>
+                                <input type="text" id="houseNumber" name="houseNumber" value="123">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Gemeente</label>
+                                <input type="text" id="city" name="city" value="Voorbeeld">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mailadres</label>
+                                <input type="email" id="addressEmail" name="email" value="dbjelle@gmail.com">
+                            </div>
+                            <div class="buttons">
+                                <button type="button" id="cancelAddressButton" class="button">Annuleren</button>
+                                <button type="submit" id="saveAddressButton" class="button save-button">Opslaan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <script src="profiel.js"></script>
             </section>
         </main>
     </div>

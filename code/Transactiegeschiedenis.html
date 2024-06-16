@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instellingen</title>
+    <link rel="stylesheet" href="Transactiegeschiedenis.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item active">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main>
+            <header>
+                   
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="settings">
+                <div class="sidebar-settings">
+                    <ul>
+                        <a href="instellingen.html">
+                        <li >Mijn Profiel</li></a>
+                        <a href="betaalmethodes.html">
+                        <li >Betaalmethodes</li></a>
+                        <a href="meldingen.html">
+                        <li >Meldingen</li></a>
+                        <a href="weergave.html">
+                        <li>Weergave</li></a>
+                        <a href="documenten.html">
+                        <li >Documenten</li></a>
+                        <a href="Transactiegeschiedenis.html">
+                        <li class="active">Transactiegeschiedenis</li></a>
+                        <a href="acountverwijderen.html">
+                        <li>Account Verwijderen</li></a>
+                    </ul>
+                </div>
+                <hr class="vertical">
+                
+                <div class="container2">
+                    <h1>Transactiegeschiedenis</h1>
+                    <hr class="horizontaal">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Zoeken">
+
+                        <button><img src="images/filter.png" alt="">Filteren</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Transactie ID</th>
+                                <th>Naam Ontvanger</th>
+                                <th>Datum</th>
+                                <th>Betaalmethode</th>
+                                <th>Bedrag</th>
+                                <th>Status</th>
+                                <th>Acties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-bottom">
+                                <div class="check">
+                                <td><input type="checkbox"></td></div>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+                            
+
+                            <tr class="border-bottom">
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                            <tr class="border-bottom">
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                            <tr class="border-bottom">
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                            <tr class="border-bottom">
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                            <tr class="border-bottom">
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                            <tr >
+                                <td><input type="checkbox"></td>
+                                <td>AM-12345678-01</td>
+                                <td>Jonas Van Roy</td>
+                                <td>25/03/24 - 18:45</td>
+                               
+                                <td class="payment-method">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" width="40px">
+                                    <div class="payment-text">
+                                        <span>**** 1234</span>
+                                        <br>
+                                        <span>v. 06/27</span>
+                                    </div>
+                                </td>
+                                <td>€238.00</td>
+                                <td><span class="status voltooid"><img src="images/check.png" alt="" class="status-icon">Voltooid</span></td>
+                                <td>
+                                    <button class="action download">⬇</button>
+                                    <button class="action delete">🗑</button>
+                                </td>
+                            </tr>
+
+                           
+                           
+                            <!-- Repeat the above <tr> block for each row in the table -->
+                        </tbody>
+                    </table>
+                   
+                    
+                   
+                    <div class="pagination">
+                        <button class="prev-page">&lt;</button>
+                        <button class="page-number">1</button>
+                        <button class="page-number active">2</button>
+                        <span>...</span>
+                        <button class="page-number">7</button>
+                        <button class="page-number">8</button>
+                        <button class="next-page">&gt;</button>
+                    </div>
+                </div> </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

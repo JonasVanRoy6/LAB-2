@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalender</title>
-    <link rel="stylesheet" href="kalender.css">
+    <link rel="stylesheet" href="voertuig.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -18,7 +18,7 @@
                 <img src="images/logo.png" alt="logo">
             </div>
             <ul class="nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <i class='bx bxs-home' ></i>
                     <a href="index.html"><span>Home</span></a>
                 </li>
@@ -30,7 +30,7 @@
                     <i class='bx bxs-car'></i>
                     <a href="voertuigen.html"><span>Voertuigen</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <i class='bx bxs-calendar'></i>
                     <a href="kalender.html"><span>Kalender</span></a>
                 </li>
@@ -53,62 +53,45 @@
             </ul>
         </section>
         <main class="main-content">
-            <header class="header">
-                <h1>Kalender</h1>
-                <div class="profile">
-                    <img src="profile-pic.jpg" alt="Jelle De Boeck">
-                    <div class="profile-info">
-                        <span>Jelle De Boeck</span>
-                        <span>dbjelle@gmail.com</span>
+            <header>
+                    
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="voertuig">
+            <div class="flex"><h1>Selecteer het voertuig dat u wilt verzekeren</h1>
+                <div class="selection">
+                    
+                    <div class="vehicle" id="bmw" onclick="selectVehicle('bmw')">
+                        <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                        <div>BMW 116i</div>
+                    </div>
+                    <div class="vehicle" id="audi" onclick="selectVehicle('audi')">
+                        <img src="images/audi.png" alt="Audi A1">
+                        <div>Audi A1</div>
                     </div>
                 </div>
-            </header>
-            <div class="flex">
-            <section class="calendar">
-                <div class="contianer">
-                    <div class="calendar">
-                      <div class="calendar-header">
-                        <span class="month-picker" id="month-picker"> May </span>
-                        <div class="year-picker" id="year-picker">
-                          <span class="year-change" id="pre-year">
-                            <pre><</pre>
-                          </span>
-                          <span id="year">2020 </span>
-                          <span class="year-change" id="next-year">
-                            <pre>></pre>
-                          </span>
-                        </div>
-                      </div>
-                
-                      <div class="calendar-body">
-                        <div class="calendar-week-days">
-                          <div>Sun</div>
-                          <div>Mon</div>
-                          <div>Tue</div>
-                          <div>Wed</div>
-                          <div>Thu</div>
-                          <div>Fri</div>
-                          <div>Sat</div>
-                        </div>
-                        <div class="calendar-days">
-                        </div>
-                      </div>
-                      <div class="calendar-footer">
-                      </div>
-                     
-                      <div class="month-list"></div>
-                    </div>
-                  </div>
-                  </section>
-                  <section class="deadlines">
-
-                    <h2>Deadlines</h2><a href="">woensdag 15 mei</a>
+                <div class="buttons">
                     
-                    <p>U heeft geen deadlines <br> tegen vandaag.</p>
-                </section>
+                    <button id="cancel-button" class="cancel-btn"><a href="index.html">Annuleren</a></button>
+                    <button id="add-button" class="add-btn" disabled><a href="wagen.html">Start procedure</a></button>
+                </div>
+            </div></section>
         </main>
     </div>
     </div>
-    <script src="kalender.js"></script>
+    <script>
+        function selectVehicle(vehicleId) {
+            document.getElementById('bmw').classList.remove('selected');
+            document.getElementById('audi').classList.remove('selected');
+            document.getElementById(vehicleId).classList.add('selected');
+        }
+    </script>
 </body>
 </html>
