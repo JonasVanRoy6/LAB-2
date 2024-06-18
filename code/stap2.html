@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instellingen</title>
+    <link rel="stylesheet" href="voertuiginschrijven.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item active">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main>
+            <header>
+                   
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            
+                
+                <div class="container2">
+                    
+                        <h2>Upload uw ‘Document Tot Aanvraag’</h2>
+                        <div class="pdf">
+                        <div class="pdf-box">
+                            <img src="images/pdf.png" alt="PDF Icon">
+                            <p>documenttotaanvraag.pdf</p>
+                        </div>
+                        <div class="change-box">
+                            <img src="images/redo.png" alt="PDF Icon">
+                            <p>Document Veranderen</p>
+                        </div></div>
+                        <div class="buttons">
+                            <a href="index.html">
+                            <button class="cancel-btn">Annuleren</button></a>
+                            <a href="inschrijvengegevens.html">
+                            <button id="deleteButton">Start prodcedure</button></a>
+                        </div>
+                    </div>
+                
+                    
+            
+                <script src="verwijder.js"></script>
+            
+        </main>
+    </div>
+</body>
+</html>

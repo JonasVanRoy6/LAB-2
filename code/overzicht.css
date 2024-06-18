@@ -1,0 +1,430 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    margin-right: 2%;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.voertuig {
+    background-color: white;
+    width: 1500px;
+    
+    border-radius: 20px;
+    z-index: -2;
+}
+
+h1, h2, p, a, td, th, h3, h4{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+h1, h2, th, h4{
+    font-weight: 700;
+}
+
+p, td {
+    font-weight: 400;
+}
+
+a {
+    font-weight: 300;
+    text-decoration: none;
+}
+ span{
+    
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  p, label, li{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+header h1{
+    width: 300px;
+}
+  
+strong{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    
+}
+/* start navigatiebar */
+hr {
+    color: grey;
+    height: 0.1px;
+}
+.sidebar {
+    width: 240px;
+    background-color: #1A1919;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin-right: 54px;
+}
+
+.sidebar a{
+    color: #666666;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 50px 32px 32px 32px;
+}
+
+.nav-item span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    opacity: 100%;
+    padding: 12px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.nav-item.active {
+    background-color: #006AFF;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 12px 0 12px 16px;
+    color: white;
+}
+
+.nav-item.active span{
+    
+    color: white;
+}
+
+#algemeen{
+    margin: 24px 0;
+    margin-left: 32px;
+}
+
+.nav-item.logout {
+    background-color: #484747;
+    padding: 12px 0 12px 46px;
+    border-radius: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.logout span {
+    font-size: 16px;
+    color: white;
+}
+
+.general li:nth-last-child(2) {
+    margin-bottom: 186px;
+}
+
+
+
+
+.general {
+    color: #808080;
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    opacity: 20%;
+    margin: 4px 24px 28px 24px;
+}
+
+/* einde */
+
+
+   /* user*/
+   #user{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+   .user-info {
+    display: flex;
+    margin-left: 80%;
+    
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+ .user-info img{
+  border-radius: 50%;
+  max-width: 15%;
+  
+  
+}
+
+ .user-info .user-name {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+ .user-info .user-email {
+    color: #666;
+    margin-left: 20px;
+    font-size: 0.8em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inhoud{
+    
+    border: solid 1px #e3e4e6;
+   
+    border-radius: 20px;
+    display: flex;
+}
+
+.inhoud .buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons button {
+    font-size: 1em;
+     font-weight: bold;
+ }
+ 
+ 
+ .cancel-btn {
+     background-color: white; 
+     border: 1px solid #ddd;
+     
+     width: 15%;
+     border-radius: 15px;
+     margin-right: 20px;
+     color: black;
+ }
+ 
+ .cancel-btn a{
+     color: black;
+     font-weight: 400;
+ }
+ 
+ .add-btn {
+     background-color: #007bff;
+     
+     width: 15%;
+     border: none;
+     color: white;
+     border-radius: 15px;
+     
+    
+ }
+ 
+ .add-btn a{
+     color: white;
+     font-weight: 400;
+ }
+
+ .form-container, .summary-container {
+    
+    width: 100%;
+}
+
+.form-container {
+    border-right: 1px solid #ccc;
+    padding: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.form-group.half-width {
+    width: calc(45% + 4px);
+    display: inline-block;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.summary-container {
+    background-color: #007bff;
+    color: #fff;
+    
+    max-width: 30%;
+    border-top-right-radius: 20px; /* Pas de waarde aan naar de gewenste radius */
+    border-bottom-right-radius: 30px;
+  
+    
+}
+
+.summary-container button{
+  
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+   
+}
+.bovenkant{
+    padding-left: 50px;
+}
+.onderkant{ 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+     margin-top: 70%;
+     background-color: white;
+     border-bottom-right-radius: 20px;
+}
+
+.onderkant h3{
+    color: black;
+    
+}
+
+
+.align{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.summary-container h2{
+    color: white;
+    font-size: 1.7em;
+    padding-top: 50px;
+}
+
+.summary-item {
+    display: flex;
+    
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.summary-item p{
+    padding-left: 100px;
+}
+
+.total {
+    margin-bottom: 20px;
+    display: flex;
+    font-size: 0.8em;
+    
+    
+}
+
+.total p{
+    padding-left: 250px;
+}
+
+.total h3 {
+    margin-bottom: 10px;
+}
+
+.betalen{
+    display: block;
+}
+
+.tekst{
+    padding-right: 50px;
+    font-size: 0.8em;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    
+   
+}
+
+
+.popup img{
+    width: 20px;
+    height: auto;
+   
+}
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    
+}
+
+

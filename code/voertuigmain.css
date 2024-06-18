@@ -1,0 +1,341 @@
+/* Main styles */
+body {
+    display: flex;
+    max-height: 100vw;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f0f0;
+}
+
+h1, h2, p, a, td, th, button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+h1, h2, th {
+    font-weight: 700;
+}
+
+p, td {
+    font-weight: 400;
+}
+
+a , button{
+    font-weight: 300;
+    text-decoration: none;
+}
+
+hr {
+    color: grey;
+    height: 0.1px;
+}
+
+/* start navigatiebar */
+
+.sidebar {
+    width: 240px;
+    background-color: #1A1919;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin-right: 54px;
+}
+
+.sidebar a{
+    color: #666666;
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 50px 32px 32px 32px;
+}
+
+.nav-item span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    opacity: 100%;
+    padding: 12px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.nav-item.active {
+    background-color: #006AFF;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 12px 0 12px 16px;
+    color: white;
+}
+
+.nav-item.active span{
+    
+    color: white;
+}
+
+#algemeen{
+    margin: 24px 0;
+    margin-left: 32px;
+}
+
+.nav-item.logout {
+    background-color: #484747;
+    padding: 12px 0 12px 46px;
+    border-radius: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.logout span {
+    font-size: 16px;
+    color: white;
+}
+
+.general li:nth-last-child(2) {
+    margin-bottom: 186px;
+}
+
+
+
+
+.general {
+    color: #808080;
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    opacity: 20%;
+    margin: 4px 24px 28px 24px;
+}
+
+/* einde */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+#user {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+.main-content2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-display {
+    position: relative;
+    text-align: center;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    max-height: 500px;
+}
+
+.car-display .car-image {
+    width: 100%;
+    max-width: 900px;
+   
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.car-display .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
+
+.car-display h2 {
+    margin-top: -80px;
+    font-size: 24px;
+}
+
+.action-buttons {
+    margin-top: 10px;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.upcoming-payments {
+    margin-top: -11%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+}
+.upcoming-payments a{
+    color: #006AFF;
+}
+
+.upcoming-payments h3 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: white;
+}
+
+.sidebar2S {
+    width: 40%;
+}
+
+.sidebar2 div {
+    
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+h4 {
+    margin-top: 0;
+}
+
+.progress-bar {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: -20px;
+    
+}
+
+.progress {
+    
+    background-color: #007bff;
+    width: 50%;
+}
+
+.insurance-info{
+  width: 500px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.insurance-info p{
+    font-size: 0.8em;
+}
+.insurance-info h4{
+     margin-bottom: -20px;
+}
+
+.vehicle-info{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.vehicle-info p{
+    font-size: 0.8em;
+    
+}
+
+.vehicle-info h4{
+    margin-bottom: -10px;
+}
+.uit{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -50px;
+}
+
+.next-inspection{
+    background-color: white;
+}
+
+.naast{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.naast p{
+    margin-top: -3px;
+}
+
+.binnen{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: -30px;
+}

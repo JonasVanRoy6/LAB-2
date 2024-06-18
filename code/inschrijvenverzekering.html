@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalender</title>
-    <link rel="stylesheet" href="wagen.css">
+    <link rel="stylesheet" href="inschrijvenverzekering.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -66,52 +66,39 @@
             </header>
             <section class="voertuig">
                 <div class="progress"> 
-                    <div class="active" >Wagen</div>
-                    <div>Verzekering</div>
-                    <div>Gegevens</div>
-                    <div>Resultaten</div>
-                </div>
-                <div class="title">Wagen</div>
-                <div class="inhoud">
-                <div class="form-group">
-                    <label>Ben je de eerste eigenaar van deze wagen?</label>
-                    <div class="toggle-buttons">
-                        <button class="active" onclick="toggleButton(this)">Ja</button>
-                        <button onclick="toggleButton(this)">Nee</button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Hoeveel kilometers rijd je per jaar?</label>
-                    <input type="text"><span>km</span>
-                </div>
-                <div class="form-group">
-                    <label>Welke rijhulpsystemen heb je?</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox"> Dodehoekwaarschuwing</label>
-                        <label><input type="checkbox" checked> Rijstrookondersteuning</label>
-                        <label><input type="checkbox"> Cruise control vertraagt t.t.v. voorligger</label>
-                        <label><input type="checkbox" checked> Noodstopsysteem</label>
-                        <label><input type="checkbox" checked> Vermoeidheidsdetectie</label>
-                        <label><input type="checkbox"> Parkeerhulpsysteem</label>
-                        <label><input type="checkbox"> Automatische noodoproep bij ongeval</label>
-                        <label><input type="checkbox" checked> Detectie zwakke weggebruikers</label>
-                    </div></div>
-                <div class="buttons">
+                    <div class="active">Gegevens</div>
+                    <div  class="active">Verzekering</div>
                     
-                    <button id="cancel-button" class="cancel-btn"><a href="voertuigverzekeren.html">Vorige</a></button>
-                    <button id="add-button" class="add-btn" disabled><a href="verzekering.html">Volgende</a></button>
-                </div></div>
+                    <div>Betaling</div>
+                </div>
+                <div class="title">Verzekering</div>
+                <div class="inhoud">
+                    <div class="container2">
+                    
+                        
+                        <div class="pdf">
+                        <div class="pdf-box">
+                            <img src="images/plus.png" alt="PDF Icon">
+                            <p>Voeg Een Verzekering Toe</p>
+                        </div>
+                        <a href="inschrijvingbetaling.html">
+                        <div class="change-box">
+                            <img src="images/pijl.png" alt="PDF Icon">
+                            <p>Ga Verder Zonder Verzekering</p>
+                        </div></a></div>
                 </section>
         </main>
     </div>
     </div>
     <script>
-        function toggleButton(button) {
-            var buttons = button.parentElement.getElementsByTagName('button');
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove('active');
-            }
-            button.classList.add('active');
+        function selectOption(element) {
+            document.querySelectorAll('.option').forEach(option => option.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        function selectAnswer(element, group) {
+            document.querySelectorAll(`#${group} .answer`).forEach(answer => answer.classList.remove('selected'));
+            element.classList.add('selected');
         }
     </script>
 </body>

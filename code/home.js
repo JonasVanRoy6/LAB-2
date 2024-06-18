@@ -189,3 +189,49 @@ const isLeapYear = (year) => {
       )}: ${`${timer.getSeconds()}`.padStart(2, '0')}`;
     todayShowTime.textContent = formateTimer;
   }, 1000);
+
+
+  let detailsShown = false;
+
+  function showOverlay() {
+      document.getElementById('overlay').style.display = 'flex';
+  }
+
+  function hideOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+  }
+
+  function enableAddButton() {
+      const licensePlateInput = document.getElementById('licensePlate').value;
+      const addButton = document.getElementById('addButton');
+      if (licensePlateInput.trim() !== "") {
+          addButton.classList.remove('disabled');
+      } else {
+          addButton.classList.add('disabled');
+      }
+  }
+
+  function handleAddButtonClick() {
+      if (!detailsShown) {
+          showDetails();
+      } else {
+          showPopup();
+      }
+  }
+
+  function showDetails() {
+      const addButton = document.getElementById('addButton');
+      if (!addButton.classList.contains('disabled')) {
+          document.getElementById('details').style.display = 'block';
+          detailsShown = true;
+      }
+  }
+
+  function showPopup() {
+      document.getElementById('overlay2').style.display = 'flex';
+      document.getElementById('popup').style.display = 'block';
+
+      setTimeout(function() {
+          window.location.href = 'index.html';  // Vervang door de gewenste URL
+      }, 2000);
+  }

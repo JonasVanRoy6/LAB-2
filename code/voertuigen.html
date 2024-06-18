@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="voertuigmain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <i class='bx bxs-home' ></i>
+                <a href="index.html"><span>Home</span></a>
+            </li>
+            <li class="nav-item">
+                <i class='bx bxs-inbox'></i>
+                <a href="inbox.html"><span>Inbox</span></a>
+            </li>
+            <li class="nav-item active">
+                <i class='bx bxs-car'></i>
+                <a href="voertuigen.html"><span>Voertuigen</span></a>
+            </li>
+            <li class="nav-item">
+                <i class='bx bxs-calendar'></i>
+                <a href="kalender.html"><span>Kalender</span></a>
+            </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="nav general">
+            <span id="algemeen">Algemeen</span>
+            <li class="nav-item">
+                <i class='bx bx-cog' ></i>
+                <a href="instellingen.html"><span>Instellingen</span></a>
+            </li>
+            <li class="nav-item">
+                <i class='bx bxs-help-circle' ></i>
+                <a href="help.html"><span>Help</span></a>
+            </li>
+            <div class="nav-item logout">
+                <i class='bx bx-log-out' ></i>
+                <a href="logout.html"><span>Logout</span></a>
+            </div>
+        </ul>
+    </section>
+    <div class="main-content">
+        <header>
+            <h1>Voertuigen</h1>
+           <div class="user-info">
+                        
+                        <span class="notification-icon"></span>
+                        <img src="images/jef.jpg" alt="">
+                        <div id="user">
+                            <span class="user-name">Naam User</span>
+                        <span class="user-email">naamuser@gmail.com</span>
+                    </div></div>
+        </header>
+        
+        <div class="main-content2">
+            <div class="car-display">
+                <button class="nav-button" id="prev-button">❮</button>
+                <img src="images/bmw 1 serie.png" alt="BMW 116I" class="car-image">
+                <button class="nav-button" id="next-button">❯</button>
+                <h2>BMW 116I</h2>
+                
+            </div><div class="sidebar2">
+            <div class="insurance-info">
+                <h4>Over Verzekering</h4>
+                <div class="uit">
+                <p>Verzekeringsmaatschappij:</p><p> Allianz</p></div>
+                <div class="uit">
+                <p>Polisnummer: </p><p>2678953</p></div>
+                <div class="uit">
+                <p>Dekkingstype: </p><p>Allrisk</p></div>
+                <div class="uit">
+                <p>Vervaldatum: </p><p>14 oktober 2024 </p></div>
+                <div class="uit">
+                <p>Premie: </p><p> €45 per maand</p></div>
+                <div class="uit">
+                <p>Schadevrije jaren: </p><p> 3 jaar</p></div>
+            </div>
+            <div class="vehicle-info">
+                
+                <h4>Over voertuig</h4>
+                <div class="uit">
+                <p>Model: </p><p>BMW 116I</p></div>
+                <div class="uit">
+                <p>Bouwjaar: </p><p>2011</p></div>
+                <div class="uit">
+                <p>Brandstof: </p><p>Benzine</p></div>
+                <div class="uit">
+                <p>Max. vermogen: </p><p>100 kW/136 pk</p></div>
+                <div class="uit">
+                <p>Cilinderinhoud: </p><p>1598 cc</p></div>
+                <div class="uit">
+                <p>CO2-uitstoot: </p><p>125 g/km</p></div>
+                <div class="uit">
+                <p>Verbruik: </p><p>5.4 l/100 km</p></div>
+                <div class="uit">
+                <p>LEZ-goedgekeurd: </p><p>Ja</p></div>
+            </div>
+            <div class="next-inspection">
+                <div class="naast">
+                <h4>Volgende keuring</h4>
+                <p>26 juli 2024</p></div>
+                
+                <p class="binnen">binnen 60 dagen</p>
+            </div>
+        </div></div>
+            <div class="upcoming-payments">
+                <h3>Aankomende betalingen</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TITEL</th>
+                            <th>BEDRAG</th>
+                            <th>TEGEN</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Verzekeringspremie</td>
+                            <td>€40</td>
+                            <td>2 mei 2024</td>
+                            <td><a href="#">Betaal ➔</a></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Wegenbelasting</td>
+                            <td>€80</td>
+                            <td>7 mei 2024</td>
+                            <td><a href="#">Betaal ➔</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        
+    </div>
+    <script>
+
+document.getElementById('prev-button').addEventListener('click', function() {
+    // Add functionality for previous button
+    alert('Previous button clicked');
+});
+
+document.getElementById('next-button').addEventListener('click', function() {
+    // Add functionality for next button
+    alert('Next button clicked');
+});
+    </script>
+</body>
+</html>

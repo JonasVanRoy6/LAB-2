@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="verzekering.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item active">
+                    <i class='bx bxs-home' ></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-inbox'></i>
+                    <a href="inbox.html"><span>Inbox</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-car'></i>
+                    <a href="voertuigen.html"><span>Voertuigen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="kalender.html"><span>Kalender</span></a>
+                </li>
+            </ul>
+            <div class="separator"></div>
+            <ul class="nav general">
+                <span id="algemeen">Algemeen</span>
+                <li class="nav-item">
+                    <i class='bx bx-cog' ></i>
+                    <a href="instellingen.html"><span>Instellingen</span></a>
+                </li>
+                <li class="nav-item">
+                    <i class='bx bxs-help-circle' ></i>
+                    <a href="help.html"><span>Help</span></a>
+                </li>
+                <div class="nav-item logout">
+                    <i class='bx bx-log-out' ></i>
+                    <a href="logout.html"><span>Logout</span></a>
+                </div>
+            </ul>
+        </section>
+        <main class="main-content">
+            <header>
+                    
+                <div class="user-info">
+                    
+                    <span class="notification-icon"></span>
+                    <img src="images/jef.jpg" alt="">
+                    <div id="user">
+                        <span class="user-name">Naam User</span>
+                    <span class="user-email">naamuser@gmail.com</span>
+                </div></div>
+            </header>
+            <section class="voertuig">
+                <div class="progress"> 
+                    <div class="active" >Wagen</div>
+                    <div class="active" >Verzekering</div>
+                    <div>Gegevens</div>
+                    <div>Resultaten</div>
+                </div>
+                <div class="title">Verzekering</div>
+                <div class="inhoud">
+                    <div class="options">
+                        <div class="option" onclick="selectOption(this)">BA<br> <hr class="horizontaal"><small><li>Schade veroorzaakt aan anderen</li></small></div>
+                        <div class="option" onclick="selectOption(this)">BA + Mini Omnium<br> <hr class="horizontaal"><small><li>Schade veroorzaakt aan anderen</li><br><li>Brand, diefstal en glasbraak</li><br><li>Contact met dieren en natuurkrachten</li></small></div>
+                        <div class="option" onclick="selectOption(this)">BA + Full Omnium<br> <hr class="horizontaal"><small><li>Schade veroorzaakt aan anderen</li><br><li>Brand, diefstal en glasbraak</li><br><li>Contact met dieren en natuurkrachten</li><br><li>Vandalisme en joyriding</li><br><li>Eigen schade en voertuigschade</li></small></div>
+                    </div>
+                    <div class="questions">
+                        <div class="question">
+                            <div>Hoeveel jaar ben je in de laatste 5 jaar verzekerd?</div>
+                            <div class="answers" id="years">
+                                <div class="answer" onclick="selectAnswer(this, 'years')">0</div>
+                                <div class="answer" onclick="selectAnswer(this, 'years')">1</div>
+                                <div class="answer" onclick="selectAnswer(this, 'years')">2</div>
+                                <div class="answer" onclick="selectAnswer(this, 'years')">3</div>
+                                <div class="answer" onclick="selectAnswer(this, 'years')">4</div>
+                                <div class="answer selected" onclick="selectAnswer(this, 'years')">5</div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div>Hoeveel ongevallen heb je in de laatste 5 jaar gehad?</div>
+                            <div class="answers" id="accidents">
+                                <div class="answer" onclick="selectAnswer(this, 'accidents')">0</div>
+                                <div class="answer" onclick="selectAnswer(this, 'accidents')">1</div>
+                                <div class="answer" onclick="selectAnswer(this, 'accidents')">2</div>
+                                <div class="answer selected" onclick="selectAnswer(this, 'accidents')">3</div>
+                                <div class="answer" onclick="selectAnswer(this, 'accidents')">4</div>
+                                <div class="answer" onclick="selectAnswer(this, 'accidents')">5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                    
+                        <button id="cancel-button" class="cancel-btn"><a href="wagen.html">Vorige</a></button>
+                        <button id="add-button" class="add-btn" disabled><a href="gegevens.html">Volgende</a></button>
+                    </div>
+                </section>
+        </main>
+    </div>
+    </div>
+    <script>
+        function selectOption(element) {
+            document.querySelectorAll('.option').forEach(option => option.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        function selectAnswer(element, group) {
+            document.querySelectorAll(`#${group} .answer`).forEach(answer => answer.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    </script>
+</body>
+</html>

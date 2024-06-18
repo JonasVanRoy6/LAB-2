@@ -68,17 +68,27 @@
             <div class="scroll-container">
                 <div class="card">
                     
-                    <div class="left-card"><a href="voertuigverzekeren.html">
+                    <div class="left-card" onclick="showOverlay()">
                         <h2>EEN NIEUW VOERTUIG TOEVOEGEN</h2>
                         <p>Voeg in enkele eenvoudige stappen een voertuig toe.</p>
                     </div>
                     <i class="fas fa-arrow-right"></i>
                     <img src="images/bmw 1 serie.png" alt="BMW 116i">
                 </div>
+                <a href="voertuiginschrijven.html">
                 <div class="card">
                     <div class="left-card">
-                        <h2>ANDER VOERTUIG</h2>
-                        <p>Voeg in enkele eenvoudige stappen een ander voertuig toe.</p>
+                        <h2>EEN NIEUW VOERTUIG INSCHRIJVEN</h2>
+                        <p>Schrijf in enkele eenvoudige stappen een voertuig in.</p>
+                    </div></a>
+                    <i class="fas fa-arrow-right"></i>
+                    <img src="images/bmw 1 serie.png" alt="BMW 116i">
+                </div>
+                <a href="voertuigverzekeren.html">
+                <div class="card">
+                    <div class="left-card">
+                        <h2>VOERTUIG VERZEKEREN</h2>
+                        <p>Verzeker in enkele eenvoudige stappen een voertuig.</p>
                     </div></a>
                     <i class="fas fa-arrow-right"></i>
                     <img src="images/bmw 1 serie.png" alt="BMW 116i">
@@ -88,6 +98,7 @@
             <div class="navigation-dots">
                 <span class="dot" onclick="scrollToCard(0)"></span>
                 <span class="dot" onclick="scrollToCard(1)"></span>
+                <span class="dot" onclick="scrollToCard(2)"></span>
                 <!-- Voeg meer dots toe zoals nodig -->
             </div>
         </section>
@@ -180,6 +191,34 @@
             <p>U heeft geen deadlines <br> tegen vandaag.</p>
         </section>
     </aside>
+    <div id="overlay2" class="overlay2"></div>
+    <div id="popup" class="popup">
+        <p>vehicle added!</p>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="container2">
+            <h2>Voertuig Toevoegen</h2>
+            <div class="input-group">
+                <img src="images/B.png" alt="EU flag">
+                <input type="text" id="licensePlate" placeholder="Kenteken" oninput="enableAddButton()">
+            </div>
+            <div id="details" class="details">
+                <div class="fototekst">
+                <img src="images/bmwlogo.png" alt="">
+                <div class="enkel"><p><strong>1 - ABC - 123</strong> <br><p>BMW 116i</p></p></div>
+                </div>
+                <div class="plaats">
+                <p>Datum volgende keuring: </p><p>23.03.25</p></div>
+                <div class="plaats2">
+                <p>Bouwjaar: </p><p>2011</p></div>
+            </div>
+            <div class="buttons">
+                <button class="cancel" onclick="hideOverlay()">Annuleren</button>
+                <button id="addButton" class="add disabled" onclick="handleAddButtonClick()">Toevoegen</button>
+            </div>
+        </div>
+    </div>
     <script src="home.js"></script>
 </body>
 </html>
